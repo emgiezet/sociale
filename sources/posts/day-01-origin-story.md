@@ -18,16 +18,16 @@ I've been writing production software for 20 years. I've migrated 150,000 users,
 
 At Insly, we build insurance software for brokers across Europe. When the AI wave hit, leadership asked the obvious question: how do we use this? We said yes. And then the real work started.
 
-Insurance data is not clean. Policy documents span decades of formats. Compliance rules vary by country. GDPR doesn't care about your prototype timeline. And your users — insurance brokers — have zero tolerance for confident wrong answers.
+Insurance data is not clean. Policy documents span decades of formats. Compliance rules vary by country. GDPR doesn't care about your prototype timeline. And your users, insurance brokers, have zero tolerance for confident wrong answers.
 
 We built 3 RAG systems in 12 months using AWS Bedrock and LightRAG. Two of them taught us expensive lessons. One is in production today.
 
-Every sprint had a different enemy: data quality, hallucinations, retrieval failures, evaluation gaps. Sometimes all four in the same week.
+Every sprint had a different enemy: data quality, hallucinations, retrieval failures, evaluation gaps. Sometimes all four in the same week 😅
 
-I started this career writing PHP with Symfony. Then Python. Then Go. Now I spend my days figuring out how to make LLMs useful in a domain where a wrong answer can void a policy.
+I started this career writing PHP with Symfony. Then Python. Then Go. Now I spend my days figuring out how to make LLMs useful in a domain where a wrong answer can void a policy 🧓
 
 **AI that ships in production looks nothing like the demos. This month, I'm sharing everything I've learned.**
 
-Follow for 30 days of AI-in-production stories — no hype, just what actually happened.
+Follow for 30 days of AI-in-production stories. No hype, just what actually happened.
 
 #AI #InsurTech #TechLead #SoftwareEngineering #RAG

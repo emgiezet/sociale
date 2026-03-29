@@ -24,13 +24,13 @@ Here's what I mean, from building 3 of these in production:
 You need to measure them independently. A retrieval that returns the top 5 wrong chunks will produce confidently wrong answers no matter how good your model is. We track retrieval recall and precision separately from answer quality. If retrieval degrades, we know before users notice.
 
 **Reranking matters more than most people think.**
-Raw vector similarity retrieves semantically similar text — not necessarily the most relevant text for answering a specific question. We added a cross-encoder reranker after the initial retrieval step. It added latency (about 200ms), but answer accuracy improved enough to justify it. For insurance queries, accuracy beats speed.
+Raw vector similarity retrieves semantically similar text, not necessarily the most relevant text for answering a specific question. We added a cross-encoder reranker after the initial retrieval step. It added latency (about 200ms), but answer accuracy improved enough to justify it. For insurance queries, accuracy beats speed.
 
 **Chunking strategy is more important than model choice.**
-I've seen teams spend weeks evaluating GPT-4 vs Claude vs Gemini while their chunking splits policy clauses in the middle of a sentence. Fix your chunking. The model matters less than you think at this stage.
+I've seen teams spend weeks evaluating GPT-4 vs Claude vs Gemini while their chunking splits policy clauses in the middle of a sentence 🤦 Fix your chunking. The model matters less than you think at this stage.
 
 **You need a labeled evaluation dataset before you ship.**
-Not after. Before. Ours has 200 broker questions with expected answers, pulled from real support tickets. We run it on every major change. If accuracy drops more than 3%, we don't ship.
+Not after. Before. Ours has 200 broker questions with expected answers, pulled from real support tickets. We run it on every major change. If accuracy drops more than 3%, we don't ship. No exceptions 🚫
 
 **RAG is an engineering system, not a prompt. Treat it like one.**
 

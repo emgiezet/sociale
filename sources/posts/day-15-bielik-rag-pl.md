@@ -14,27 +14,27 @@ cta: Udostępnij, jeśli zależy ci na polskim AI
 
 Zbudowaliśmy system RAG po polsku, używając modeli Bielik. Oto czego się nauczyliśmy.
 
-Pracuję jako Tech Lead w Insly — budujemy oprogramowanie dla ubezpieczycieli i brokerów w całej Europie. Kiedy zaczęliśmy wdrażać AI, szybko trafiliśmy na problem, który rzadko pojawia się w anglojęzycznych tutorialach: nasze dane są po polsku.
+Pracuję jako Tech Lead w Insly. Budujemy oprogramowanie dla ubezpieczycieli i brokerów w całej Europie. Kiedy zaczęliśmy wdrażać AI, szybko trafiliśmy na problem, który rzadko pojawia się w anglojęzycznych tutorialach: nasze dane są po polsku.
 
-Polisowe dokumenty, klauzule, regulaminy — wszystko w języku polskim. Modele wytrenowane głównie na angielskim tekście radzą sobie z tym znacznie gorzej, niż można by oczekiwać.
+Polisowe dokumenty, klauzule, regulaminy, wszystko w języku polskim. Modele wytrenowane głównie na angielskim tekście radzą sobie z tym znacznie gorzej, niż można by oczekiwać 😅
 
-Dlatego zaczęliśmy testować Bielik — polski model językowy rozwijany przez AI71 i społeczność, zoptymalizowany pod kątem języka polskiego.
+Dlatego zaczęliśmy testować Bielik, polski model językowy rozwijany przez AI71 i społeczność, zoptymalizowany pod kątem języka polskiego.
 
 Co zyskaliśmy:
 
 → Lepsze rozumienie polskiej składni i terminologii ubezpieczeniowej bez specjalnego promptowania.
-→ Możliwość hostowania modelu lokalnie — co w kontekście RODO i przetwarzania danych klientów ma ogromne znaczenie.
+→ Możliwość hostowania modelu lokalnie, co w kontekście RODO i przetwarzania danych klientów ma ogromne znaczenie.
 → Niższe ryzyko wycieku danych wrażliwych do zewnętrznych API.
 
 Co nas zaskoczyło:
 
-→ Jakość embeddingów dla polskiego tekstu jest wciąż słabsza niż dla angielskiego — to obszar, który wymaga dodatkowej pracy przy budowie pipeline'u RAG.
+→ Jakość embeddingów dla polskiego tekstu jest wciąż słabsza niż dla angielskiego. To obszar, który wymaga dodatkowej pracy przy budowie pipeline'u RAG.
 → Ewaluacja wyników jest trudniejsza. Nie ma tylu gotowych benchmarków dla polskiego jak dla angielskiego.
-→ Społeczność rośnie, ale dokumentacja bywa nieaktualna. Trzeba eksperymentować.
+→ Społeczność rośnie, ale dokumentacja bywa nieaktualna. Trzeba eksperymentować 🤷‍♂️
 
-Dlaczego to ważne poza Insly? Polska ma tysiące firm przetwarzających wrażliwe dane w języku polskim — prawo, medycyna, finanse, ubezpieczenia. Modele anglojęzyczne działają tutaj na pół gwizdka. Bielik to krok w dobrym kierunku.
+Dlaczego to ważne poza Insly? Polska ma tysiące firm przetwarzających wrażliwe dane w języku polskim: prawo, medycyna, finanse, ubezpieczenia. Modele anglojęzyczne działają tutaj na pół gwizdka. Bielik to krok w dobrym kierunku.
 
-**Polski AI to nie jest ciekawostka — to infrastruktura, którą będziemy potrzebować, jeśli chcemy realnie wdrażać AI w regulowanych sektorach polskiej gospodarki.**
+**Polski AI to nie jest ciekawostka. To infrastruktura, którą będziemy potrzebować, jeśli chcemy realnie wdrażać AI w regulowanych sektorach polskiej gospodarki.**
 
 Udostępnij, jeśli zależy ci na polskim AI.
 

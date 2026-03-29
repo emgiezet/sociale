@@ -14,15 +14,15 @@ cta: Potrzebujesz konsultacji AI? Napisz do mnie
 
 Pracując jako konsultant, firmy proszą mnie o pomoc z systemami IT. Oto najczęstszy błąd, który widzę.
 
-Jestem Tech Leadem w Insly, ale doradzam też firmom spoza mojej organizacji, które chcą wdrożyć AI. Widziałem już ten schemat wielokrotnie — w ubezpieczeniach, finansach, logistyce, sektorze publicznym.
+Jestem Tech Leadem w Insly, ale doradzam też firmom spoza mojej organizacji, które chcą wdrożyć AI. Widziałem już ten schemat wielokrotnie: w ubezpieczeniach, finansach, logistyce, sektorze publicznym.
 
 Błąd nie jest techniczny. Prawie nigdy.
 
 **Firmy zaczynają od narzędzi, zamiast od problemu.**
 
-Przychodzą z gotową odpowiedzią: "Chcemy wdrożyć RAG", "Chcemy agentów AI", "Chcemy integrację z GPT". Kiedy pytam, jaki konkretny problem to rozwiązuje — zapada cisza, albo pojawia się ogólne "żebyśmy byli bardziej innowacyjni."
+Przychodzą z gotową odpowiedzią: "Chcemy wdrożyć RAG", "Chcemy agentów AI", "Chcemy integrację z GPT". Kiedy pytam, jaki konkretny problem to rozwiązuje, zapada cisza, albo pojawia się ogólne "żebyśmy byli bardziej innowacyjni."
 
-To nie jest strategia. To buzzword acquisition.
+To nie jest strategia. To buzzword acquisition 🙃
 
 Co widzę za tym schematem:
 
@@ -36,7 +36,7 @@ Firmy budują prototyp z danymi klientów, zanim ktokolwiek zapyta, w jakim kraj
 
 Trzeci błąd: ocenianie sukcesu wdrożenia AI przez pryzmat "czy działa", a nie "czy rozwiązuje problem lepiej niż poprzednie rozwiązanie."
 
-System AI, który odpowiada na 80% pytań gorzej niż stara wyszukiwarka, nie jest postępem. Jest droższym problemem.
+System AI, który odpowiada na 80% pytań gorzej niż stara wyszukiwarka, nie jest postępem. Jest droższym problemem 💸
 
 **AI w regulowanych branżach wymaga porządku w tym samym co zawsze: definicji problemu, mierzalnych celów i kogoś odpowiedzialnego za wynik.**
 

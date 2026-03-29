@@ -14,7 +14,7 @@ cta: Follow if this inspired you to start posting
 
 I've posted on LinkedIn every weekday for a month. Here's what surprised me.
 
-I'm a Tech Lead, not a content creator. I write code, architecture docs, and postmortems. Posting daily on LinkedIn felt like a strange experiment. I did it anyway. Here's the honest debrief.
+I'm a Tech Lead, not a content creator. I write code, architecture docs, and postmortems. Posting daily on LinkedIn felt like a strange experiment 🧪 I did it anyway. Here's the honest debrief.
 
 **What was harder than expected:**
 
@@ -24,7 +24,7 @@ Deciding what to leave out. My drafts were always 40% longer than the final post
 
 **What was easier than expected:**
 
-I have more material than I thought. 20 years of production engineering generates a lot of opinions. The problem wasn't finding things to say — it was choosing.
+I have more material than I thought. 20 years of production engineering generates a lot of opinions. The problem wasn't finding things to say. It was choosing.
 
 Engineers engage thoughtfully. The comments on technical posts were substantive. People shared their own failures, their own numbers, their own approaches. I expected more hot takes and got more real conversations.
 
@@ -32,12 +32,12 @@ Engineers engage thoughtfully. The comments on technical posts were substantive.
 
 The Polish-language post got engagement from people I've never seen comment on anything else. There's an audience that's underserved by English-only tech content in Poland. I didn't expect that to surface so quickly.
 
-Posts about failure outperformed posts about success. The RAG lessons that cost us, the compliance walls we hit, the architecture decisions we regretted — those landed harder than the wins.
+Posts about failure outperformed posts about success. The RAG lessons that cost us, the compliance walls we hit, the architecture decisions we regretted. Those landed harder than the wins.
 
 Consistency matters more than any single post. No individual post changed anything. The cumulative presence did.
 
-**A month of daily posting didn't make me a content creator. It made me a better communicator about engineering.**
+**A month of daily posting didn't make me a content creator. It made me a better communicator about engineering.** Not what I expected, honestly 🤷
 
-Follow if this inspired you to start posting — or to restart after stopping.
+Follow if this inspired you to start posting, or to restart after stopping.
 
 #LinkedIn #ContentCreation #AI #SoftwareEngineering

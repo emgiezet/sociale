@@ -1,6 +1,6 @@
 ---
 day: 13
-title: "How to set up your first RAG pipeline with AWS Bedrock — in plain English."
+title: "How to set up your first RAG pipeline with AWS Bedrock, in plain English."
 pillar: Educator
 format: How-to
 language: English
@@ -12,16 +12,16 @@ image_unsplash_query: "AWS cloud architecture diagram"
 cta: Bookmark this for when you need it
 ---
 
-How to set up your first RAG pipeline with AWS Bedrock — in plain English.
+How to set up your first RAG pipeline with AWS Bedrock, in plain English.
 
-I've built 3 RAG systems in production. The first time, I spent days piecing together docs, blog posts, and trial-and-error. You don't have to.
+I've built 3 RAG systems in production. The first time, I spent days piecing together docs, blog posts, and trial-and-error 🙃 You don't have to.
 
 RAG stands for Retrieval-Augmented Generation. The idea: instead of asking an LLM what it knows, you give it relevant documents first, then ask the question. The answers are grounded in your data, not baked-in training weights.
 
 Here's the pipeline, step by step:
 
 **1. Store your documents in S3.**
-Upload PDFs, Word docs, plain text — whatever your data looks like. Bedrock's Knowledge Base will ingest from S3. Keep your bucket organized by domain or source type.
+Upload PDFs, Word docs, plain text, whatever your data looks like. Bedrock's Knowledge Base will ingest from S3. Keep your bucket organized by domain or source type.
 
 **2. Create a Knowledge Base in AWS Bedrock.**
 This takes your S3 documents, chunks them, embeds them using a model (Titan Embeddings works well), and stores the vectors in OpenSearch Serverless. AWS manages all of this for you.
@@ -39,7 +39,7 @@ What Bedrock gets right: managed infrastructure, built-in IAM, and reasonable co
 
 What to watch: chunking strategy matters more than people think. Default settings work for general text. Technical documents, policy clauses, and structured data often need custom chunking.
 
-**The hard part of RAG isn't the setup — it's evaluation. Build a test set of questions with known answers before you ship anything.**
+**The hard part of RAG isn't the setup. It's evaluation.** Build a test set of questions with known answers before you ship anything. We learned this the expensive way 💸
 
 Bookmark this for when you need it. Questions? Drop them below.
 

@@ -14,15 +14,15 @@ cta: "What's your biggest AWS cost surprise? Comment below."
 
 Our AWS RDS bill was growing 40% year over year. Here's what we did about it.
 
-At Insly, we run multi-tenant insurance software across European markets. Data volume grows. That's expected. But 40% YoY growth in RDS costs without proportional user growth meant something was wrong — and it wasn't the database.
+At Insly, we run multi-tenant insurance software across European markets. Data volume grows. That's expected. But 40% YoY growth in RDS costs without proportional user growth meant something was wrong. And it wasn't the database.
 
 **Step 1: Diagnosis**
-We started with AWS Cost Explorer and RDS Performance Insights. Within two hours we identified the top 10 most expensive queries by cumulative execution time. Three of them accounted for over 60% of the CPU load. Two of those three had no indexes on the filtered columns.
+We started with AWS Cost Explorer and RDS Performance Insights. Within two hours we identified the top 10 most expensive queries by cumulative execution time 🕵️ Three of them accounted for over 60% of the CPU load. Two of those three had no indexes on the filtered columns.
 
-Legacy code. Added years ago. Never revisited.
+Legacy code. Added years ago. Never revisited 😐
 
 **Step 2: Query analysis**
-We used `pg_stat_statements` to capture query patterns across a full week. This was more useful than point-in-time profiling. Insurance workloads are not uniform — broker activity peaks at certain hours, quarter-end reporting creates spikes. A week of data showed us patterns we'd have missed in a 2-hour window.
+We used `pg_stat_statements` to capture query patterns across a full week. This was more useful than point-in-time profiling. Insurance workloads are not uniform: broker activity peaks at certain hours, quarter-end reporting creates spikes. A week of data showed us patterns we'd have missed in a 2-hour window.
 
 **Step 3: Targeted indexing**
 We didn't add indexes blindly. Each candidate went through the same check:
@@ -37,7 +37,7 @@ Performance Insights showed our peak CPU utilization was 35%. We were on an inst
 
 **Result: RDS costs stopped growing. Year-over-year bill is flat while data volume continues to increase.**
 
-This wasn't clever architecture. It was measurement, then action — in that order.
+This wasn't clever architecture. It was measurement, then action. In that order.
 
 What's your biggest AWS cost surprise? Comment below.
 

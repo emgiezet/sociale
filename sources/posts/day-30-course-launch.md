@@ -16,11 +16,11 @@ cta: DM 'COURSE' for early access + founder pricing
 
 When I started this series, I wasn't sure what would land. I wrote about RAG architecture, GDPR constraints, Bielik and Polish-language models, vibecoding, evaluation frameworks, team transformation, InsurTech compliance, Symfony, and what 20 years of production engineering looks like when AI enters the picture.
 
-The response was clearer than I expected. Engineers don't want more theory. They want someone who has shipped AI to real users in a regulated industry to show them exactly how it's done — including what failed.
+The response was clearer than I expected. Engineers don't want more theory. They want someone who has shipped AI to real users in a regulated industry to show them exactly how it's done. Including what failed.
 
 That's the course.
 
-**Agentic AI Developer** is for software engineers who want to build and ship production AI systems. Not toy projects. Not prompt engineering tutorials. Real agentic architectures, real evaluation practices, real compliance considerations.
+**Agentic AI Developer** is for software engineers who want to build and ship production AI systems. Not toy projects. Not prompt engineering tutorials 🙅 Real agentic architectures, real evaluation practices, real compliance considerations.
 
 Here's what's inside:
 
@@ -31,11 +31,11 @@ Here's what's inside:
 → Working with domain-specific data: what changes when your documents are legal, medical, or insurance-specific
 → Team adoption: how to bring engineers along when the tooling changes every three months
 
-I built this from 12 months of production work and 20 years of engineering experience. Every module reflects something real — a decision we made, a failure we recovered from, a pattern that consistently works.
+I built this from 12 months of production work and 20 years of engineering experience. Every module reflects something real: a decision we made, a failure we recovered from, a pattern that consistently works.
 
 The course is not live yet. I'm opening early access to the people who followed this journey from the beginning.
 
-**30 days of posts was the proof of concept. The course is the full build.**
+**30 days of posts was the proof of concept. The course is the full build.** 🚀
 
 DM me 'COURSE' for early access and founder pricing before the public launch.
 
