@@ -167,9 +167,215 @@ Struktura każdego posta:
 
 ---
 
+# Seria RAG Masterclass: techniki zaawansowane
+
+## Context
+
+Deep dive'y do technik, które day-06 ("RAG breaks at 15 documents") tylko zasygnalizował. Każdy post rozwija jeden koncept w pełny artykuł. Razem z serią "Koszty, Modele, Dane" tworzą kompletny RAG knowledge hub na blogu.
+
+**Uwaga:** Day-06 już pokrywa temat "RAG z tutoriali pada po 15 dokumentach" i wspomina RAPTOR + HyDE. Nowe posty to deep dive'y, nie powtórki. Każdy nowy post może linkować wstecz do day-06 jako wprowadzenia.
+
+## Parametry
+
+- **Język:** Dwujęzyczny (PL + EN)
+- **Format:** Kontynuacja serii (day-40 do day-44)
+- **Pillar:** Educator / Builder
+- **CTA:** Link do bloga + kontakt biznesowy w ostatnich postach
+
+## Plan serii: 5 postów
+
+### Post 10 -- `day-40-rag-hyde` -- HyDE: Hypothetical Document Embeddings
+
+**Pliki:** `day-40-rag-hyde-pl.md` + `day-40-rag-hyde-en.md`
+
+**Tytuł PL:** „Twój użytkownik pyta inaczej niż Twoje dokumenty odpowiadają. HyDE to naprawia."
+**Tytuł EN:** "Your users ask questions nothing like your documents answer them. HyDE fixes that."
+
+**LinkedIn (zajawka):**
+- Hook: "Broker pyta: 'czy to pokrywa szkody powodziowe?' Klauzula w polisie mówi: 'zakres ochrony obejmuje zdarzenia losowe zgodnie z par. 4 ust. 2'. Vector search tego nie połączy."
+- Kluczowy insight: HyDE generuje hipotetyczny dokument-odpowiedź i szuka po nim zamiast po pytaniu. Zmienia retrieval z "znajdź podobne słowa" na "znajdź podobne odpowiedzi"
+- 1 przykład before/after: to samo pytanie, retrieval bez HyDE vs z HyDE
+- Teaser: "Na blogu pokazuję implementację HyDE krok po kroku z kodem i metrykami"
+- CTA: link do bloga
+
+**Blog (pełny artykuł):**
+- Problem: semantic gap między pytaniem a odpowiedzią w dokumentach domenowych
+- Jak działa HyDE: LLM generuje hipotetyczną odpowiedź, embedding hipotetycznej odpowiedzi, retrieval po tym embeddingu
+- Implementacja w Pythonie z przykładami kodu
+- Kiedy HyDE pomaga (domain-specific jargon), kiedy szkodzi (proste pytania faktograficzne)
+- Metryki: retrieval recall before/after na naszym test set
+- Koszty: dodatkowe wywołanie LLM per query, kiedy to się opłaca
+- Format: Technical / Deep dive
+- Nawiązanie: "W day-06 wspomniałem HyDE jako jedną z technik. Oto pełny obraz."
+
+### Post 11 -- `day-41-rag-raptor` -- RAPTOR: hierarchiczne podsumowania
+
+**Pliki:** `day-41-rag-raptor-pl.md` + `day-41-rag-raptor-en.md`
+
+**Tytuł PL:** „Flat chunking zabija Twój RAG. RAPTOR buduje drzewo wiedzy z Twoich dokumentów."
+**Tytuł EN:** "Flat chunking is killing your RAG. RAPTOR builds a knowledge tree from your documents."
+
+**LinkedIn (zajawka):**
+- Hook: "Chunking po 300 tokenów to jak czytanie książki po jednym zdaniu. Tracisz kontekst po 3 chunkach."
+- Kluczowy insight: RAPTOR buduje hierarchię: chunk -> sekcja -> dokument -> podsumowanie. Retrieval może sięgnąć na właściwy poziom abstrakcji
+- 1 przykład: pytanie wymagające kontekstu z 3 sekcji dokumentu, flat chunking zwraca 1 z 3, RAPTOR zwraca podsumowanie łączące wszystkie
+- Teaser: "Pełną architekturę RAPTOR z diagramami i kodem opisałem na blogu"
+- CTA: link do bloga
+
+**Blog (pełny artykuł):**
+- Problem: flat chunks tracą kontekst między sekcjami dokumentu
+- Jak działa RAPTOR: clustering chunks, hierarchiczne podsumowania, multi-level retrieval
+- Architektura: diagram pipeline'u z RAPTOR
+- Implementacja: kod Pythonowy, integracja z istniejącym pipeline
+- Trade-offs: czas indeksowania (znacznie dłuższy), storage (więcej embeddingów), ale lepszy recall na pytaniach wymagających kontekstu
+- Kiedy RAPTOR jest overkill (proste FAQ) vs kiedy jest niezbędny (dokumenty prawne, polisy)
+- Format: Technical / Architecture
+
+### Post 12 -- `day-42-rag-hallucinations` -- Kontrolowanie halucynacji w RAG
+
+**Pliki:** `day-42-rag-hallucinations-pl.md` + `day-42-rag-hallucinations-en.md`
+
+**Tytuł PL:** „Twój RAG halucynuje. Oto 5 miejsc, w których to łapiesz zanim użytkownik to zobaczy."
+**Tytuł EN:** "Your RAG hallucinates. Here are 5 places to catch it before your users do."
+
+**LinkedIn (zajawka):**
+- Hook: "RAG miał wyeliminować halucynacje. W praktyce je maskuje. Model odpowiada pewnie, cytuje źródło, a źródło mówi coś innego."
+- Kluczowy insight: 5 checkpointów w pipeline (retrieval quality gate, faithfulness check, source verification, confidence scoring, canary questions)
+- 1 przykład: halucynacja która przeszła przez 4 z 5 checkpointów i jak ją złapał piąty
+- Teaser: "Na blogu opisuję nasz pełny anti-hallucination framework z progami i metrykami"
+- CTA: link do bloga
+
+**Blog (pełny artykuł):**
+- Dlaczego RAG nie eliminuje halucynacji (tylko zmienia ich charakter)
+- 5 checkpointów: retrieval precision gate, LLM-as-judge faithfulness, source-answer alignment, confidence scoring, canary test set
+- Implementacja każdego checkpointu z kodem
+- Progi: jakie metryki ustawiamy, kiedy blokujemy odpowiedź
+- Red lines: lista pytań gdzie każda halucynacja to blocker (w ubezpieczeniach: kwoty, zakresy, wyłączenia)
+- Monitoring w produkcji: jak wykrywać drift halucynacji w czasie
+- Format: Technical / Framework
+
+### Post 13 -- `day-43-rag-guardrails` -- Guardrails: Twój RAG chwali konkurencję?
+
+**Pliki:** `day-43-rag-guardrails-pl.md` + `day-43-rag-guardrails-en.md`
+
+**Tytuł PL:** „Nasz RAG polecał produkty konkurencji. Oto jak to naprawiliśmy i czego Cię to nauczy o guardrails."
+**Tytuł EN:** "Our RAG recommended competitor products. Here's how we fixed it and what it teaches about guardrails."
+
+**LinkedIn (zajawka):**
+- Hook: "Zbudowaliśmy RAG dla brokerów. W pierwszym tygodniu testów system polecił produkt konkurencji. Z pełnym przekonaniem. Z poprawnym źródłem."
+- Kluczowy insight: guardrails to nie filtr na wyjściu. To architektura: context scoping, brand safety, output validation, topic boundaries
+- Teaser: "Na blogu opisuję 4 warstwy guardrails które wdrożyliśmy i jak je testujesz w CI"
+- CTA: link do bloga
+
+**Blog (pełny artykuł):**
+- Historia: jak RAG polecił konkurencję (context bleed między dokumentami różnych ubezpieczycieli)
+- 4 warstwy guardrails:
+  1. **Context scoping**: filtrowanie dokumentów po firmie/produkcie PRZED retrieval
+  2. **Brand safety**: output validation, wykrywanie nazw konkurencji, off-topic detection
+  3. **Topic boundaries**: system nie odpowiada na pytania spoza zdefiniowanego zakresu
+  4. **AWS Bedrock Guardrails**: managed guardrails vs custom
+- Testowanie guardrails w CI: adversarial test set, red teaming
+- Kiedy guardrails blokują za dużo (false positives) i jak to kalibrować
+- Format: Technical / Case study
+
+### Post 14 -- `day-44-rag-product-modeling` -- Modelowanie produktu RAG
+
+**Pliki:** `day-44-rag-product-modeling-pl.md` + `day-44-rag-product-modeling-en.md`
+
+**Tytuł PL:** „RAG to nie feature. To produkt. Oto jak go modeluję zanim napiszę linijkę kodu."
+**Tytuł EN:** "RAG is not a feature. It's a product. Here's how I model it before writing a line of code."
+
+**LinkedIn (zajawka):**
+- Hook: "Większość RAG-ów powstaje tak: 'dodajmy chatbota do naszych dokumentów'. Potem 3 miesiące walki z jakością bez zdefiniowanych celów."
+- Kluczowy insight: RAG wymaga product thinkingu: kto jest użytkownikiem, jakie pytania zadaje, jaka precyzja jest akceptowalna, co się dzieje gdy system nie wie
+- 1 przykład: jak zdefiniowaliśmy 11 intencji użytkownika i dlaczego to zmieniło architekturę
+- Teaser: "Na blogu opisuję pełny framework modelowania produktu RAG z templatem do pobrania"
+- CTA: link do bloga + "DM 'RAG PRODUCT' jeśli chcesz template"
+
+**Blog (pełny artykuł):**
+- Dlaczego "chatbot na dokumentach" to nie product spec
+- Framework modelowania RAG jako produktu:
+  1. User personas i ich pytania (nasze 11 intencji)
+  2. Quality contract: precision/recall/latency targets per intencja
+  3. Failure modes: co system robi kiedy nie wie (refuse vs escalate vs hedge)
+  4. Feedback loop: jak zbierasz sygnały od użytkowników
+  5. Ewaluacja jako product metric, nie tech metric
+- Jak intent-based routing zmienił naszą architekturę (z jednego pipeline na 11 ścieżek)
+- Template do pobrania: RAG Product Canvas
+- Format: Strategic / Framework
+
+### Post 15 -- `day-45-rag-prompt-engineering` -- Prompt Engineering w RAG: nie ma jednego promptu
+
+**Pliki:** `day-45-rag-prompt-engineering-pl.md` + `day-45-rag-prompt-engineering-en.md`
+
+**Tytuł PL:** „Nie ma jednego promptu do RAG. Kto Ci to powiedział, nigdy nie wdrażał RAG w produkcji."
+**Tytuł EN:** "There's no silver bullet RAG prompt. Anyone who told you otherwise never shipped RAG to production."
+
+**LinkedIn (zajawka):**
+- Hook: "Widziałem 'ultimate RAG prompt' na Twitterze. 47 linii. Działa świetnie na demo z 5 dokumentami. W produkcji z 3000 dokumentów ubezpieczeniowych? Halucynuje na 40% pytań."
+- Kluczowy insight: prompt w RAG to nie jeden template. To zestaw promptów dopasowanych do intencji, typu pytania i jakości kontekstu. Inny prompt gdy retriever zwraca 5 trafnych chunków, inny gdy zwraca 2 słabe
+- 1 przykład: ten sam prompt, dwa pytania, dwie katastrofy. Prompt na pytanie o zakres polisy działa, prompt na pytanie o wyłączenia halucynuje
+- Teaser: "Na blogu pokazuję nasze 4 strategie promptowania per typ intencji, z metrykami before/after"
+- CTA: link do bloga
+
+**Blog (pełny artykuł):**
+- Mit "universal RAG prompt": dlaczego jeden prompt nie działa na wszystkie typy pytań
+- Zmienne w prompt engineeringu RAG:
+  1. Typ intencji użytkownika (fakt vs porównanie vs procedura)
+  2. Jakość kontekstu (ile trafnych chunków, confidence score)
+  3. Język i domena (polski prawniczy vs angielski techniczny)
+  4. Output format (krótka odpowiedź vs szczegółowe wyjaśnienie ze źródłami)
+- 4 strategie promptów które stosujemy:
+  1. **High-confidence retrieval**: prompt pozwala modelowi odpowiadać swobodnie na podstawie kontekstu
+  2. **Low-confidence retrieval**: prompt wymusza ostrożność, "odpowiedz tylko jeśli kontekst zawiera bezpośrednią odpowiedź"
+  3. **Multi-source synthesis**: prompt do łączenia informacji z wielu chunków z cytowaniem źródeł
+  4. **Refusal prompt**: kiedy system mówi "nie mam wystarczających informacji"
+- Dynamic prompt selection: jak automatycznie dobieramy prompt na podstawie retrieval quality score
+- Anti-patterns: za długie system prompts, contradicting instructions, prompt stuffing
+- Metryki: faithfulness i answer relevance per strategia promptu
+- Format: Technical / Framework
+
+### Post 16 -- `day-46-rag-pricing-model` -- Wycena produktu RAG: model kosztów per architektura
+
+**Pliki:** `day-46-rag-pricing-model-pl.md` + `day-46-rag-pricing-model-en.md`
+
+**Tytuł PL:** „Klient pyta: ile będzie kosztował RAG? Oto jak to liczę zanim podam cenę."
+**Tytuł EN:** "The client asks: how much will RAG cost? Here's how I calculate before quoting a price."
+
+**Nawiązania:** Day-39 opisuje koszty infrastruktury. Day-44 opisuje modelowanie produktu. Ten post łączy oba: jak z kosztów infra i scope'u produktu zbudować wycenę dla klienta.
+
+**LinkedIn (zajawka):**
+- Hook: "Klient mówi: 'chcemy RAG-a'. Ja pytam: 'na ilu dokumentach, w jakim języku, z jakim SLA, i ile zapytań dziennie?' Bo od tego zależy czy to kosztuje 500 czy 15 000 miesięcznie."
+- Kluczowy insight: wycena RAG to nie "cena za chatbota". To model kosztów zbudowany z 4 warstw: infra, development, maintenance, ewaluacja. Każda architektura (managed/self-hosted/hybrid) zmienia proporcje
+- 1 przykład: ten sam use case, 3 architektury, 3 zupełnie różne ceny. Klient myślał że najtańsza opcja jest najlepsza. Okazało się że najdroższa w infra jest najtańsza w total cost of ownership
+- Teaser: "Na blogu pokazuję pełny model wyceny z arkuszem kalkulacyjnym do pobrania"
+- CTA: link do bloga + "DM 'RAG PRICING' jeśli wyceniasz RAG dla swojej organizacji"
+
+**Blog (pełny artykuł):**
+- Dlaczego "ile kosztuje RAG" to złe pytanie (odpowiedź: zależy od 6 zmiennych)
+- 6 zmiennych wyceny:
+  1. **Volume**: ilość dokumentów w bazie, ilość zapytań dziennie/miesięcznie
+  2. **Język i domena**: angielski = tańsze modele, polski = droższe lub self-hosted
+  3. **SLA jakości**: 80% accuracy vs 95% accuracy to 3x różnica w kosztach ewaluacji i iteracji
+  4. **Compliance**: RODO, data residency, audit trail. Każde wymuszenie = koszt architektoniczny
+  5. **Integracje**: standalone chatbot vs embedded w istniejący system
+  6. **Maintenance**: kto utrzymuje, kto ewaluuje, kto iteruje
+- 3 case studies wyceny (ten sam use case: 1000 dokumentów, 5000 zapytań/miesiąc, polski):
+  - **Opcja A: Full managed (Bedrock)** - niski dev cost, wysoki recurring, ograniczona kontrola
+  - **Opcja B: Self-hosted** - wysoki dev cost, niski recurring po break-even, pełna kontrola
+  - **Opcja C: Hybrid** - umiarkowany dev cost, umiarkowany recurring, dobry balans
+- Tabela TCO: Year 1 vs Year 2 vs Year 3 per architektura
+- Ukryte koszty których klienci nie widzą: ewaluacja ongoing, model drift, reindeksacja, support
+- Arkusz kalkulacyjny do pobrania: RAG Cost Calculator
+- Jak prezentować wycenę klientowi: nie "cena za RAG", tylko "TCO per architektura z trade-offs"
+- Format: Strategic / Business
+
+---
+
 ## Kolejne kroki (wszystkie serie)
 
 1. Dodać materiały z warsztatów do repo (seria warsztatowa)
 2. Wypełnić szkielety postów konkretnymi danymi, przykładami i cytatami
 3. Przygotować dane kosztowe do postów RAG (pricing Bedrock, GPU rental, szacunki)
 4. Review całości jako spójnej narracji
+5. Ustalić URL bloga i format linków w CTA
