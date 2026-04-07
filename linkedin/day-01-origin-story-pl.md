@@ -1,34 +1,32 @@
 ---
 day: 1
-title_pl: "Prowadzę 15 inżynierów budujących InsurTech SaaS. Nikt nam nie powiedział, że to będzie tak trudne."
+title_pl: "Każde demo AI wygląda świetnie. Potem puszczasz je na prawdziwe dane ubezpieczeniowe."
 pillar: Builder
 format: Story post
 scheduled_date: 2026-03-23
 posting_time: "08:00 CET"
-hashtags: ["#AI", "#InsurTech", "#TechLead", "#InżynieriaOprogramowania", "#RAG"]
+hashtags: ["#AI", "#InsurTech", "#TechLead", "#RAG", "#InżynieriaOprogramowania"]
 image: ../images/day-01.jpg
-cta: "Obserwuj — przez 30 dni dzielę się tym, co naprawdę dzieje się za kulisami AI w produkcji"
+cta: "Obserwuj — przez 30 dni opowiadam, co naprawdę dzieje się za kulisami AI w produkcji"
 blog_url: "https://mmx3.pl/blog/day-01-origin-story"
 ---
 
-Prowadzę 15 inżynierów budujących InsurTech SaaS. Nikt mi nie powiedział, że to będzie tak trudne.
+Każde demo AI wygląda świetnie. Potem puszczasz je na prawdziwe dane ubezpieczeniowe.
 
-Piszę produkcyjny software od 20 lat. Migrowałem 150 000 użytkowników, optymalizowałem bazy danych, budowałem aplikacje płatności mobilnych. Nic mnie nie przygotowało na wdrożenie AI w regulowanej branży.
+Pewne siebie odpowiedzi. Płynne zdania. Zarząd zachwycony. A potem broker pyta o ochronę od powodzi, system odpowiada „tak" — a klient jej nie ma.
 
-W Insly buduję oprogramowanie ubezpieczeniowe dla brokerów w całej Europie. Kiedy nadeszła fala AI, zarząd zadał oczywiste pytanie: jak z tego skorzystamy? Powiedziałem tak. I wtedy zaczęła się prawdziwa praca.
+W ubezpieczeniach błędna odpowiedź to nie „ups, spróbuj ponownie." To odpowiedzialność prawna. Realne roszczenie. Regulator, który nie przyjmie tłumaczenia „tak powiedział model."
 
-Dane ubezpieczeniowe nie są czyste. Dokumenty polisowe obejmują dekady formatów. Przepisy dotyczące zgodności różnią się w zależności od kraju. RODO nie przejmuje się harmonogramem Twojego prototypu. A użytkownicy — brokerzy ubezpieczeniowi — mają zerową tolerancję na pewne siebie błędne odpowiedzi.
+Zbudowaliśmy 4 prototypy RAG w 12 miesięcy. Trzy wyrzuciliśmy. Czwarty — w pełni autorski system w Pythonie — działa w produkcji do dziś i zdał egzamin KNF dla brokerów.
 
-Zbudowałem z zespołem 3 systemy RAG w 12 miesięcy, używając AWS Bedrock i LightRAG. Dwa nauczyły nas kosztownych lekcji. Jeden działa w produkcji do dziś.
+Co poszło nie tak z pierwszymi trzema? Embeddingi off-the-shelf nie rozumiały żargonu ubezpieczeniowego. Graf wiedzy nie umiał filtrować po firmie i linii produktów. A dokumenty polisowe z ostatnich 30 lat mają tyle formatów, ile było zmian regulacyjnych.
 
-Każdy sprint miał innego wroga: jakość danych, halucynacje, błędy retrieval, luki w ewaluacji. Czasem wszystkie cztery w tym samym tygodniu 😅
+20 lat produkcyjnego softu — Symfony, Python, Go — i żadne z tych doświadczeń nie przygotowało mnie na domenę, gdzie AI musi być audytowalny, filtrowalny i nie może się mylić.
 
-Zacząłem tę karierę pisząc PHP z Symfony. Potem Python. Potem Go. Teraz spędzam dni na wymyślaniu, jak sprawić, żeby LLM-y były użyteczne w domenie, gdzie błędna odpowiedź może unieważnić polisę 🧓
+**Przez najbliższe 30 dni dzielę się tym, co naprawdę się wydarzyło — konkretnymi liczbami, błędami i wnioskami.**
 
-**AI, które trafia do produkcji, nie wygląda nic jak demo. Przez ten miesiąc dzielę się wszystkim, czego się nauczyłem.**
-
-Obserwuj — przez 30 dni dzielę się tym, co naprawdę dzieje się za kulisami AI w produkcji. Bez hype'u, tylko to, co naprawdę się wydarzyło.
+Obserwuj, jeśli chcesz wiedzieć, jak wygląda AI, które faktycznie trafia do produkcji.
 
 Pełny artykuł na blogu: https://mmx3.pl/blog/day-01-origin-story
 
-#AI #InsurTech #TechLead #InżynieriaOprogramowania #RAG
+#AI #InsurTech #TechLead #RAG #InżynieriaOprogramowania
