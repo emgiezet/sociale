@@ -1,3 +1,5 @@
 linkedin_state.json
 debug_*.png
 .venv/
+/tmp/
+__pycache__/
