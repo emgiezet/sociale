@@ -27,17 +27,17 @@ RAG z 200 dokumentami w języku angielskim dla wewnętrznego HR i RAG z 20 000 d
 
 Sześć zmiennych decyduje o cenie:
 
-**1. Wolumen**: liczba dokumentów i zapytań miesięcznie. 1 000 zapytań/dzień to inny świat niż 100 000.
+1. Wolumen. Liczba dokumentów i zapytań miesięcznie. 1 000 zapytań/dzień to inny świat niż 100 000.
 
-**2. Język**: angielski = tańsze modele, lepsza dostępność, niższe koszty embeddingów. Polski = droższe modele lub self-hosted (Bielik), wyższe koszty inferencji.
+2. Język. Angielski = tańsze modele, lepsza dostępność, niższe koszty embeddingów. Polski = droższe modele lub self-hosted (Bielik), wyższe koszty inferencji.
 
-**3. SLA jakości**: 80% accuracy vs 95% to nie 15% różnicy w koszcie. To 2-3x różnica w koszcie ewaluacji, iteracji i utrzymania.
+3. SLA jakości. 80% accuracy vs 95% to nie 15% różnicy w koszcie. To 2-3x różnica w koszcie ewaluacji, iteracji i utrzymania.
 
-**4. Compliance**: RODO, data residency, audit trail — każdy wymóg to koszt architektoniczny. Dane ubezpieczeniowe nie mogą opuścić UE. To wyklucza część opcji i wymaga konkretnych konfiguracji.
+4. Compliance. RODO, data residency, audit trail. Każdy wymóg to koszt architektoniczny. Dane ubezpieczeniowe nie mogą opuścić UE. To wyklucza część opcji i wymaga konkretnych konfiguracji.
 
-**5. Integracje**: standalone chatbot vs embedded w CRM/ERP/systemie brokerskim. Ten drugi kosztuje 3-5x więcej w developmencie.
+5. Integracje. Standalone chatbot vs embedded w CRM/ERP/systemie brokerskim. Ten drugi kosztuje 3-5x więcej w developmencie.
 
-**6. Utrzymanie**: kto ewaluuje, iteruje, re-indeksuje gdy dokumenty się zmienią? To ukryty koszt, który zabija projekty rok po wdrożeniu.
+6. Utrzymanie. Kto ewaluuje, iteruje, re-indeksuje gdy dokumenty się zmienią? To ukryty koszt, który zabija projekty rok po wdrożeniu.
 
 ---
 
@@ -45,11 +45,11 @@ Sześć zmiennych decyduje o cenie:
 
 Case: 1 000 dokumentów polskich, 5 000 zapytań/miesiąc, SLA 90% precision.
 
-**Opcja A — Full managed (AWS Bedrock)**: niski koszt dev (~40h setup), wysoki koszt recurring (~1 200$/mies w tej skali). Pełna kontrola nad niczym. Najłatwiejsza w startcie, najdroższa w roku 3.
+Opcja A, full managed (AWS Bedrock): niski koszt dev (~40h setup), wysoki koszt recurring (~1 200$/mies w tej skali). Pełna kontrola nad niczym. Najłatwiejsza na start, najdroższa w roku 3.
 
-**Opcja B — Self-hosted (Bielik + Qdrant na EC2)**: wysoki koszt dev (~200h setup), niski recurring po break-even (~300$/mies po amortyzacji sprzętu). Pełna kontrola. Najtrudniejszy start, najtańszy rok 3.
+Opcja B, self-hosted (Bielik + Qdrant na EC2): wysoki koszt dev (~200h setup), niski recurring po break-even (~300$/mies po amortyzacji sprzętu). Pełna kontrola. Najtrudniejszy start, najtańszy rok 3.
 
-**Opcja C — Hybrid (Bedrock dla generacji + self-hosted wektorówka)**: umiarkowany dev (~100h), umiarkowany recurring (~600$/mies). Dobry balans.
+Opcja C, hybrid (Bedrock dla generacji + self-hosted wektorówka): umiarkowany dev (~100h), umiarkowany recurring (~600$/mies). Dobry balans.
 
 Klient myślał że Opcja B jest najtańsza. Spojrzeliśmy na TCO rok 3: Opcja A 43 000$, Opcja B 28 000$, Opcja C 24 000$. Opcja C wygrała — najlepsza proporcja przy jego skali.
 
@@ -57,10 +57,10 @@ Klient myślał że Opcja B jest najtańsza. Spojrzeliśmy na TCO rok 3: Opcja A
 
 **Ukryte koszty, których klienci nie widzą**
 
-→ Ongoing ewaluacja: ktoś musi uruchamiać i interpretować canary test set. 4-8h/miesiąc inżynierskiego czasu.  
-→ Model drift: modele Bedrock są cicho aktualizowane. Precision może spaść z dnia na noc. Ktoś musi to monitorować.  
-→ Re-indeksowanie: dokumenty ubezpieczeniowe zmieniają się co roku. Re-indeksowanie 1 000 dokumentów to koszt embeddingów + weryfikacja jakości.  
-→ Support użytkowników: pierwsze 3 miesiące po wdrożeniu to 40% czasu systemu na pytania "dlaczego nie wie o X?"
+→ Ongoing ewaluacja. Ktoś musi uruchamiać i interpretować canary test set. 4-8h/miesiąc inżynierskiego czasu.  
+→ Model drift. Modele Bedrock są cicho aktualizowane. Precision może spaść z dnia na noc. Ktoś musi to monitorować.  
+→ Re-indeksowanie. Dokumenty ubezpieczeniowe zmieniają się co roku. Re-indeksowanie 1 000 dokumentów to koszt embeddingów + weryfikacja jakości.  
+→ Support użytkowników. Pierwsze 3 miesiące po wdrożeniu to 40% czasu na pytania "dlaczego nie wie o X?"
 
 ---
 

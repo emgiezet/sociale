@@ -17,25 +17,23 @@ Zbudowałem systemy RAG używając obu. Nie benchmarki — rzeczywiste produkty 
 
 Oto uczciwe porównanie.
 
-**AWS Bedrock Knowledge Bases**
+AWS Bedrock Knowledge Bases:
 
 → Zarządzana ingestion: S3 → chunkowanie → embedding → OpenSearch Serverless. Konfiguruję, AWS uruchamia.
 → Natywne IAM. Logi audytu. Dostępny region EU. Historia compliance jest prosta.
-→ Koszt: przewidywalny, ale szybko się sumuje przy skali. Płacę za storage, wywołania retrieval i bazowy vector DB.
-→ Elastyczność: ograniczona. Pracuję w ramach abstrakcji Bedrocka. Niestandardowe strategie chunkowania i logika retrieval wymagają obejść.
+→ Koszt przewidywalny, ale szybko się sumuje przy skali. Płacę za storage, wywołania retrieval i bazowy vector DB.
+→ Elastyczność ograniczona. Pracuję w ramach abstrakcji Bedrocka. Niestandardowe strategie chunkowania i logika retrieval wymagają obejść.
 
-**LightRAG**
+LightRAG:
 
 → Retrieval oparty na grafie. Dokumenty stają się grafem wiedzy, nie tylko indeksem wektorowym. Zmienia to, na jakie typy pytań mogę odpowiadać.
 → Pełna kontrola. Mam pipeline od końca do końca: chunkowanie, model embeddingowy, logika retrieval, reranking.
 → Działa lokalnie lub na własnej infrastrukturze. Dla wrażliwych danych to często lepsze rozwiązanie domyślne.
 → Więcej pracy inżynierskiej. Nie ma przycisku "synchronizuj Knowledge Base". Sam buduję i utrzymuję pipeline.
 
-**Kiedy wybieram Bedrock:**
-Nowe projekty wymagające szybkiego uruchomienia, zespoły bez dedykowanej pojemności MLOps lub workloady, gdzie historia compliance dla AWS jest już ustalona.
+Kiedy wybieram Bedrock: nowe projekty wymagające szybkiego uruchomienia, zespoły bez dedykowanej pojemności MLOps lub workloady, gdzie historia compliance dla AWS jest już ustalona.
 
-**Kiedy wybieram LightRAG:**
-Złożone dokumenty, gdzie relacje między encjami mają znaczenie, dane w języku innym niż angielski, gdzie potrzebuję kontroli nad embeddingami, lub gdy potrzebuję wzorców retrieval, których abstrakcja Bedrocka nie wspiera.
+Kiedy wybieram LightRAG: złożone dokumenty, gdzie relacje między encjami mają znaczenie, dane w języku innym niż angielski, gdzie potrzebuję kontroli nad embeddingami, lub gdy potrzebuję wzorców retrieval, których abstrakcja Bedrocka nie wspiera.
 
 Na 40 pytaniach specyficznie o relacje między dokumentami: Bedrock: 52% dokładności retrieval, LightRAG: 81%.
 

@@ -31,7 +31,7 @@ Ale tu jest haczyk: wygenerowany kod Symfony przejdzie review tylko wtedy, gdy n
 
 AI nie zastępuje wiedzy o Symfony. Nagradza ją. Najbardziej korzystają ci, którzy natychmiast widzą, kiedy wygenerowany kod ciął właściwe narożniki, a kiedy złe.
 
-**20 lat Symfony nauczyło mnie, że dobra architektura przeżywa każde narzędzie. AI to najnowsze narzędzie. Zasady architektury nie są nowe.**
+20 lat Symfony nauczyło mnie, że dobra architektura przeżywa każde narzędzie. AI to najnowsze narzędzie. Zasady architektury nie są nowe.
 
 Obserwuj dla skrzyżowania PHP + AI. Dwie rzeczy, których większość ludzi nie spodziewa się zobaczyć razem 🤷
 

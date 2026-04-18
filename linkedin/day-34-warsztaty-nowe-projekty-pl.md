@@ -19,31 +19,21 @@ Podczas warsztatów jeden z uczestników zapytał: "Dobra, ale od czego właści
 
 Oto co pokazałem — w takiej kolejności, w jakiej to stosuję w praktyce:
 
-**→ Wymagania razem z AI, nie po AI**
+→ Wymagania razem z AI, nie po AI. Zanim napiszesz pierwszą linię kodu, otwórz Clauda i opisz problem domenowy. Nie po to, żeby dostać gotowe rozwiązanie — po to, żeby zadać sobie pytania, których sam byś nie zadał. AI widzi luki w wymaganiach szybciej niż większość review.
 
-Zanim napiszesz pierwszą linię kodu, otwórz Clauda i opisz problem domenowy. Nie po to, żeby dostać gotowe rozwiązanie — po to, żeby zadać sobie pytania, których sam byś nie zadał. AI widzi luki w wymaganiach szybciej niż większość review.
+→ Projektowanie z asystentem, nie z białą kartką. Opisz kontekst, ograniczenia, stack. Poproś o warianty. Potem dyskutuj, odrzucaj, wybieraj. To nie jest oddanie decyzji. To skompresowanie pierwszych 3 godzin myślenia do 30 minut.
 
-**→ Projektowanie z asystentem, nie z blankietem**
+→ Implementacja: Cursor jako pair programmer. Nie "wygeneruj mi cały serwis". Krótkie pętle: napisz — sprawdź — zmodyfikuj prompt — wygeneruj test — sprawdź ponownie. Pokazałem jak to wygląda na realnym kodzie Go i Python.
 
-Zamiast zaczynać od białej kartki przy projektowaniu architektury — opisz kontekst, ograniczenia, stack. Poproś o warianty. Potem dyskutuj, odrzucaj, wybieraj. To nie jest oddanie decyzji. To skompresowanie pierwszych 3 godzin myślenia do 30 minut.
+→ Review kodu przez AI zanim trafi do ludzi. Przed każdym PR — daj go AI z konkretnym promptem: "Sprawdź czy to jest bezpieczne pod kątem X, czy naruszam zasadę Y, jakie edge case'y pominąłem." Na warsztatach inżynierowie zaczęli łapać rzeczy, których wcześniej nie widzieli.
 
-**→ Implementacja: Cursor jako pair programmer**
-
-Nie jako "wygeneruj mi cały serwis". Jako partner do krótkich pętli: napisz — sprawdź — zmodyfikuj prompt — wygeneruj test — sprawdź ponownie. Pokazałem jak wygląda ta pętla w praktyce na realnym kodzie Go i Python.
-
-**→ Review kodu przez AI zanim trafi do ludzi**
-
-Przed każdym PR — daj go AI z konkretnym promptem: "Sprawdź czy to jest bezpieczne pod kątem X, czy naruszam zasadę Y, jakie edge case'y pominąłem." Na warsztatach inżynierowie zaczęli łapać rzeczy, których wcześniej nie widzieli.
-
-**→ Testy generowane, nie wymyślane**
-
-Opisujesz zachowanie, AI generuje przypadki testowe — włącznie z tymi nieprzyjemnymi. Potem weryfikujesz, czy to ma sens. Czas pisania testów jednostkowych skrócił się wyraźnie, ale co ważniejsze — testy stają się myśleniem, nie klepaniem.
+→ Testy generowane, nie wymyślane. Opisujesz zachowanie, AI generuje przypadki testowe — włącznie z tymi nieprzyjemnymi. Potem weryfikujesz, czy to ma sens. Czas pisania testów skrócił się wyraźnie, ale co ważniejsze — testy stają się myśleniem, nie klepaniem.
 
 Efekt po pierwszym dniu warsztatów?
 
 Jeden z seniorów powiedział: "Kurczę, ja przez ostatnie trzy lata traciłem czas na rzeczy, które AI robi w 5 minut." Nie powiedział tego z frustracją. Powiedział to z ulgą.
 
-Bo to nie jest rewolucja. To jest odciążenie — od tych fragmentów pracy, które były żmudne, a nie twórcze.
+Bo to nie jest rewolucja. To odciążenie od żmudnych fragmentów pracy.
 
 Które z tych podejść stosujesz już na co dzień? A które Cię zaskoczyło?
 

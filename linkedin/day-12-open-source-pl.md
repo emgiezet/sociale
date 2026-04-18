@@ -19,10 +19,10 @@ Większość moich wkładów nigdy nie pojawi się w niczyim wystąpieniu konfer
 
 Oto czego praca przy dużym projekcie OSS nauczyła mnie o oprogramowaniu na skalę:
 
-→ **Wsteczna kompatybilność to ograniczenie, które zmienia sposób myślenia.** Kiedy 18 milionów ludzi może polegać na Twoim kodzie, nie możesz refaktoryzować tylko dlatego, że refaktoryzacja jest elegancka. Każde publiczne API to obietnica.
-→ **Code review w tej skali to inna dyscyplina.** Nauczyłem się oceniać PR w izolacji — czy rozwiązuje podany problem? Czy wprowadza edge case'y? Czy jest spójny z istniejącym projektem API?
-→ **Dokumentacja to kod.** Nieudokumentowana funkcja dla większości użytkowników nie istnieje. Praca nad czytelnym oprogramowaniem — przez dokumenty, przykłady, komunikaty błędów, nazewnictwo — to praca inżynierska, nie myśl doklejona na końcu.
-→ **Społeczność to produkt.** Zdrowe społeczności się kumulują.
+→ Wsteczna kompatybilność zmienia sposób myślenia. Kiedy 18 milionów ludzi może polegać na Twoim kodzie, nie możesz refaktoryzować tylko dlatego, że refaktoryzacja jest elegancka. Każde publiczne API to obietnica.
+→ Code review w tej skali to inna dyscyplina. Nauczyłem się oceniać PR w izolacji: czy rozwiązuje podany problem? Czy wprowadza edge case'y? Czy jest spójny z istniejącym projektem API?
+→ Dokumentacja to kod. Nieudokumentowana funkcja dla większości użytkowników nie istnieje. Praca nad czytelnym oprogramowaniem, przez dokumenty, przykłady, komunikaty błędów, nazewnictwo, to praca inżynierska. Nie myśl doklejona na końcu.
+→ Społeczność to produkt. Zdrowe społeczności się kumulują.
 
 Przynoszę to wszystko do swojej pracy w Insly — szczególnie dyscyplinę wstecznej kompatybilności. Kiedy 150 000 dokumentów miesięcznie polega na mojej platformie, każda zmiana API to problem wstecznej kompatybilności.
 

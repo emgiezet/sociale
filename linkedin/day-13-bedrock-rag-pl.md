@@ -19,20 +19,15 @@ RAG to Retrieval-Augmented Generation. Idea: zamiast pytać LLM, co wie, najpier
 
 Oto pipeline krok po kroku:
 
-**1. Przechowuj dokumenty w S3.**
-Wgraj PDF-y, dokumenty Word, zwykły tekst — cokolwiek wygląda jak Twoje dane. Knowledge Base Bedrocka ingestuje z S3. Trzymaj bucket zorganizowany według domeny lub typu źródła.
+1. Przechowuj dokumenty w S3. Wgraj PDF-y, dokumenty Word, zwykły tekst. Knowledge Base Bedrocka ingestuje z S3. Trzymaj bucket zorganizowany według domeny lub typu źródła.
 
-**2. Utwórz Knowledge Base w AWS Bedrock.**
-To bierze dokumenty z S3, chunkuje je, embedduje przy użyciu modelu (Titan Embeddings dobrze działa) i przechowuje wektory w OpenSearch Serverless. AWS zarządza tym wszystkim za Ciebie.
+2. Utwórz Knowledge Base w AWS Bedrock. To bierze dokumenty z S3, chunkuje je, embedduje przy użyciu modelu (Titan Embeddings dobrze działa) i przechowuje wektory w OpenSearch Serverless. AWS zarządza tym za Ciebie.
 
-**3. Zsynchronizuj Knowledge Base.**
-To jest krok ingestion. Dokumenty są chunkowane (domyślnie: 300 tokenów z overlap), embeddowane i indeksowane. Dla dużych zbiorów dokumentów spodziewaj się, że zajmie to czas.
+3. Zsynchronizuj Knowledge Base. To jest krok ingestion. Dokumenty są chunkowane (domyślnie: 300 tokenów z overlap), embeddowane i indeksowane. Dla dużych zbiorów dokumentów spodziewaj się, że zajmie to czas.
 
-**4. Uruchom zapytanie retrieval.**
-Wywołaj API `retrieve` z zapytaniem w języku naturalnym. Bedrock zwraca top-k najbardziej odpowiednich chunków z referencjami źródłowymi.
+4. Uruchom zapytanie retrieval. Wywołaj API `retrieve` z zapytaniem w języku naturalnym. Bedrock zwraca top-k najbardziej odpowiednich chunków z referencjami źródłowymi.
 
-**5. Augmentuj i generuj.**
-Weź pobrane chunki, zbuduj prompt zawierający je jako kontekst i wywołaj model foundation (Claude, Titan itp.) z tym promptem. Model odpowiada używając Twoich dokumentów.
+5. Augmentuj i generuj. Weź pobrane chunki, zbuduj prompt zawierający je jako kontekst i wywołaj model foundation (Claude, Titan itp.) z tym promptem. Model odpowiada używając Twoich dokumentów.
 
 Co Bedrock robi dobrze: zarządzana infrastruktura, wbudowane IAM i rozsądna postawa compliance dla workloadów EU z odpowiednią konfiguracją regionu.
 

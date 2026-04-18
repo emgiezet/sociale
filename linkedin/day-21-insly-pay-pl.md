@@ -19,19 +19,19 @@ W tamtym czasie uważałem to za brutalne. Z perspektywy czasu — to było najl
 
 Oto co łączy compliance płatności z compliance AI:
 
-→ **Audytowalność jest niezbywalna.** PSD2 wymaga pełnego śladu każdej transakcji. AI w ubezpieczeniach wymaga śladu każdej decyzji. Ta sama zasada: kiedy coś idzie nie tak, muszę wyjaśnić dokładnie co się stało i dlaczego.
+Audytowalność jest niezbywalna. PSD2 wymaga pełnego śladu każdej transakcji. AI w ubezpieczeniach wymaga śladu każdej decyzji. Ta sama zasada: kiedy coś idzie nie tak, muszę wyjaśnić dokładnie co się stało i dlaczego.
 
-→ **Nie można najpierw wdrożyć, a potem naprawiać.** Błąd w przepływie płatności unieważnia transakcje. Halucynujące AI unieważnia zaufanie. W środowiskach regulowanych "move fast and break things" to strategia dla innej branży 🙃
+Nie można najpierw wdrożyć, a potem naprawiać. Błąd w przepływie płatności unieważnia transakcje. Halucynujące AI unieważnia zaufanie. W środowiskach regulowanych "move fast and break things" to strategia dla innej branży 🙃
 
-→ **Integracje z podmiotami trzecimi mnożą powierzchnię ryzyka.** Każda bramka płatnicza, którą podłączyłem, to kolejna granica compliance do zarządzania. Każdy dostawca LLM, którego używam w Insly, niesie tę samą odpowiedzialność. Ich obsługa danych staje się moim problemem.
+Integracje z podmiotami trzecimi mnożą powierzchnię ryzyka. Każda bramka płatnicza, którą podłączyłem, to kolejna granica compliance do zarządzania. Każdy dostawca LLM, którego używam w Insly, niesie tę samą odpowiedzialność. Ich obsługa danych staje się moim problemem.
 
-→ **Zasady się zmieniają.** PSD2 ewoluowało. Regulacje AI ewoluują teraz. Potrzebna jest architektura, która obsługuje zmiany zasad bez przepisywania systemu od zera.
+Zasady się zmieniają. PSD2 ewoluowało. Regulacje AI ewoluują teraz. Potrzebna jest architektura, która obsługuje zmiany zasad bez przepisywania systemu od zera.
 
 Wzorzec, który wciąż dostrzegam: inżynierowie, którzy wdrożyli coś w jednym regulowanym środowisku, adaptują się do nowych środowisk regulowanych znacznie szybciej. Model mentalny się przenosi.
 
 Zbudowałem InslyPay zanim zbudowałem systemy RAG. Ta kolejność nie była przypadkowym szczęściem. To był trening 🎯
 
-**Regulowane środowiska mają wzorce. Naucz się ich raz, stosuj wszędzie.**
+Regulowane środowiska mają wzorce. Naucz się ich raz, stosuj wszędzie.
 
 Pełny artykuł na blogu: https://mmx3.pl/blog/day-21-insly-pay
 

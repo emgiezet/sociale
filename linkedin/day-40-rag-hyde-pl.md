@@ -19,7 +19,7 @@ W dniu 7 pisałem o tym, że naiwny RAG ma fundamentalne ograniczenia. Jednym z 
 
 "Powódź" vs "zdarzenie losowe obejmujące zalanie nieruchomości wskutek wezbrania wód". Podobieństwo kosinusowe w przestrzeni wektorowej: niskie. Fakt, że to to samo zdarzenie: tak.
 
-**HyDE rozwiązuje ten problem elegancko**
+HyDE rozwiązuje ten problem
 
 HyDE — Hypothetical Document Embeddings — to technika zaproponowana przez Gao et al. w 2022 roku. Idea jest prosta:
 
@@ -27,17 +27,17 @@ Zamiast osadzać pytanie użytkownika i szukać podobnych fragmentów, prosimy L
 
 Dlaczego to działa? Bo hipotetyczna odpowiedź jest napisana w tym samym stylu i języku co rzeczywiste dokumenty. "Zdarzenie powodziowe jest zdarzeniem losowym w rozumieniu niniejszych OWU i podlega ochronie zgodnie z §4." — to jest tekst, który semantycznie leży blisko klauzuli.
 
-**Przed i po HyDE na moich danych**
+Przed i po HyDE na moich danych
 
 Zapytanie: "Czy polisa pokrywa szkody spowodowane zalaniem od strony rzeki?"
 
-→ **Bez HyDE:** Retriever zwraca fragmenty ze słowem "zalanie" — głównie procedury zgłaszania szkód, nie klauzule odpowiedzialności. Recall na moim zbiorze testowym: 0.61.
+→ Bez HyDE: retriever zwraca fragmenty ze słowem "zalanie" — głównie procedury zgłaszania szkód, nie klauzule odpowiedzialności. Recall na moim zbiorze testowym: 0.61.
 
-→ **Z HyDE:** LLM generuje hipotezę: "Ochrona obejmuje szkody powstałe wskutek powodzi i zalania, w tym zalania od strony cieków wodnych, z zastrzeżeniem wyłączeń określonych w §7." Retriever trafia w klauzulę. Recall: 0.79.
+→ Z HyDE: LLM generuje hipotezę: "Ochrona obejmuje szkody powstałe wskutek powodzi i zalania, w tym zalania od strony cieków wodnych, z zastrzeżeniem wyłączeń określonych w §7." Retriever trafia w klauzulę. Recall: 0.79.
 
 18 punktów procentowych poprawy. Na realnym zbiorze pytań ubezpieczeniowych.
 
-**Kiedy HyDE pomaga, a kiedy szkodzi**
+Kiedy HyDE pomaga, a kiedy szkodzi
 
 Pomaga: pytania specjalistyczne w języku branżowym, gdzie pytanie użytkownika i dokument są napisane bardzo inaczej. Ubezpieczenia, prawo, medycyna.
 

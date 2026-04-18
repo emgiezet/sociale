@@ -15,19 +15,19 @@ Buduję kurs o nazwie "Agentic AI Developer". Oto dla kogo jest — i dla kogo n
 
 Przez ostatni rok budowałem systemy AI w produkcji: 3 pipeline'y RAG, agentic workflows, realne ograniczenia compliance. Stale dostaję pytania od doświadczonych programistów próbujących przejść przez ten sam proces. Kurs to moja odpowiedź na te pytania — na skalę.
 
-**Dla kogo jest:**
+Dla kogo jest:
 
 → Inżynierowie oprogramowania z 5+ latami doświadczenia, którzy chcą wdrażać systemy AI, a nie tylko z nimi eksperymentować.
 → Tech leaderzy i managerowie inżynierów, którzy muszą rozumieć agentic AI wystarczająco głęboko, żeby podejmować decyzje architektoniczne.
 → Programiści w regulowanych branżach (fintech, insurtech, prawo, zdrowie), którzy potrzebują wzorców produkcyjnych, a nie tutoriali z notebookami.
 
-**Dla kogo NIE jest:**
+Dla kogo NIE jest:
 
 → Początkujący szukający pierwszego kursu programowania. Zacznij gdzie indziej.
 → Osoby chcące wskazówek z prompt engineeringu i ChatGPT. To nie ten kurs.
 → Ktokolwiek oczekujący akademickiej teorii bez działającego kodu. Wszystko jest wdrażane.
 
-**Co obejmuje:**
+Co obejmuje:
 
 → Wzorce architektury agentic: agenci, narzędzia, pamięć, orkiestracja.
 → RAG w produkcji: chunkowanie, retrieval, ewaluacja, iteracja.

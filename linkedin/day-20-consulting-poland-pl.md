@@ -17,7 +17,7 @@ Jestem Tech Leadem w Insly, ale doradzam też firmom spoza mojej organizacji, kt
 
 Błąd nie jest techniczny. Prawie nigdy.
 
-**Firmy zaczynają od narzędzi, zamiast od problemu.**
+Firmy zaczynają od narzędzi, zamiast od problemu.
 
 Przychodzą z gotową odpowiedzią: "Chcemy wdrożyć RAG", "Chcemy agentów AI", "Chcemy integrację z GPT". Kiedy pytam, jaki konkretny problem to rozwiązuje, zapada cisza. Albo pojawia się ogólne "żebyśmy byli bardziej innowacyjni."
 

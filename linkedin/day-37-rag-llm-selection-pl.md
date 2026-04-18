@@ -21,27 +21,27 @@ Nie "który model jest najlepszy globalnie?", tylko "który model jest najlepszy
 
 To jest fundamentalna różnica.
 
-**Czego benchmarki nie mierzą**
+Czego benchmarki nie mierzą
 
-MMLU, HellaSwag, HumanEval — to są testy na angielskich danych, z angielskim kontekstem. Kiedy retriever wyciągnie klauzulę z polskiej polisy ubezpieczeniowej i zapyta model o interpretację — benchmark tego nie przewiduje.
+MMLU, HellaSwag, HumanEval — to testy na angielskich danych, z angielskim kontekstem. Kiedy retriever wyciągnie klauzulę z polskiej polisy ubezpieczeniowej i zapyta model o interpretację — benchmark tego nie przewiduje.
 
 Przetestowałem cztery podejścia na realnym zestawie polis z Insly:
 
-→ **Claude Sonnet (Bedrock)** — ~$3/1M tokenów wejściowych. Świetna jakość rozumowania, dobry polski, natywna integracja z AWS, łatwy compliance story dla klientów z Europy.
+→ Claude Sonnet (Bedrock) — ~$3/1M tokenów wejściowych. Dobra jakość rozumowania, dobry polski, natywna integracja z AWS, łatwy compliance story dla klientów z Europy.
 
-→ **GPT-4o (OpenAI API)** — ~$5/1M tokenów wejściowych. Najlepsza jakość out-of-the-box, ale droższy i bardziej skomplikowany jeśli chodzi o kwestie GDPR dla klientów enterprise.
+→ GPT-4o (OpenAI API) — ~$5/1M tokenów wejściowych. Najlepsza jakość out-of-the-box, ale droższy i bardziej skomplikowany pod kątem GDPR dla klientów enterprise.
 
-→ **Mistral Medium (Mistral API)** — szacunkowo ~$0.4/1M tokenów wejściowych. Zaskakująco dobry stosunek jakości do ceny na tekstach technicznych. Polski: wystarczający, nie excellent.
+→ Mistral Medium (Mistral API) — szacunkowo ~$0.4/1M tokenów wejściowych. Zaskakująco dobry stosunek jakości do ceny na tekstach technicznych. Polski: wystarczający, nie excellent.
 
-→ **Bielik (self-hosted)** — model open-source trenowany na polskich danych. Zero kosztu za token, ale płacisz za GPU i devops. Na moim zbiorze dokumentów ubezpieczeniowych: +12pp precision vs Mistral Medium na pytaniach o polskie klauzule.
+→ Bielik (self-hosted) — model open-source trenowany na polskich danych. Zero kosztu za token, ale płacisz za GPU i devops. Na moim zbiorze dokumentów ubezpieczeniowych: +12pp precision vs Mistral Medium na pytaniach o polskie klauzule.
 
-**I tu się zaczęło prawdziwe liczenie**
+A potem zaczęło się prawdziwe liczenie
 
 Przy 10 000 zapytań miesięcznie różnica między GPT-4o a Mistral to kilkaset dolarów. Przy 200 000 zapytań — to są tysiące miesięcznie. A self-hosted Bielik przy małym wolumenie jest DROŻSZY niż zarządzane API, bo płacisz za GPU niezależnie od ruchu.
 
 Break-even między self-hosted a managed zwykle wypada gdzieś w okolicach 50-100k zapytań miesięcznie. Zależy od architektury, ale jest to liczba, której większość startupów nie osiąga w pierwszym roku.
 
-**Jak faktycznie testować modele na swoich danych**
+Jak faktycznie testować modele na swoich danych
 
 Nie demo pytania. Złoty zestaw testowy: 50-100 realnych pytań z mojego systemu, z oczekiwanymi odpowiedziami. Metryki: faithfulness (czy model halucynuje poza kontekstem?) i answer relevance (czy odpowiada na właściwe pytanie?).
 

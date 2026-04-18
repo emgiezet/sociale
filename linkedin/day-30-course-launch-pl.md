@@ -19,7 +19,7 @@ Odpowiedź była wyraźniejsza niż się spodziewałem. Inżynierowie nie chcą 
 
 To jest ten kurs.
 
-**Agentic AI Developer** jest dla inżynierów oprogramowania, którzy chcą budować i wdrażać produkcyjne systemy AI. Nie projekty zabawkowe. Nie tutoriale o inżynierii promptów 🙅 Prawdziwe architektury agentic, prawdziwe praktyki ewaluacji, prawdziwe rozważania compliance.
+Agentic AI Developer jest dla inżynierów oprogramowania, którzy chcą budować i wdrażać produkcyjne systemy AI. Nie projekty zabawkowe. Nie tutoriale o inżynierii promptów 🙅 Prawdziwe architektury agentic, prawdziwe praktyki ewaluacji, prawdziwe rozważania compliance.
 
 Co jest w środku:
 
@@ -34,7 +34,7 @@ Zbudowałem to z 18 miesięcy pracy produkcyjnej i 20 lat doświadczenia inżyni
 
 Kurs nie jest jeszcze na żywo. Otwieram wczesny dostęp dla ludzi, którzy śledzili tę podróż od początku.
 
-**30 dni postów było proof of concept. Kurs to pełny build.** 🚀
+30 dni postów było proof of concept. Kurs to pełny build 🚀
 
 Napisz 'KURS' w DM po wczesny dostęp i cenę fundatora przed publicznym uruchomieniem.
 

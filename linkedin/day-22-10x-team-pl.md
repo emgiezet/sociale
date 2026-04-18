@@ -17,17 +17,17 @@ Prowadzę inżynierów od lat. Spotkałem garstkę ludzi, którzy kodują wyjąt
 
 W Insly prowadzę 15-osobowy zespół inżynierów AI. Wdrażam systemy produkcyjne w branży regulowanej z realnymi konsekwencjami błędów. Oto czego nauczyłem się o budowaniu zespołu, który naprawdę mnoży wyniki.
 
-**Bezpieczeństwo psychologiczne pierwsze, prędkość drugie.** Inżynierowie, którzy boją się wyjść na głupców, nie eksperymentują. A w AI eksperymentowanie to praca. Jawnie nagradzam "próbowałem tego i zawiodłem, oto czego się nauczyłem" w retrospektywach. Normalizacja tego zajęła miesiące. Warto było każdego miesiąca 💯
+Bezpieczeństwo psychologiczne przed prędkością. Inżynierowie, którzy boją się wyjść na głupców, nie eksperymentują. A w AI eksperymentowanie to praca. Jawnie nagradzam "próbowałem tego i zawiodłem, oto czego się nauczyłem" w retrospektywach. Normalizacja tego zajęła miesiące. Warto było każdego miesiąca 💯
 
-**Krótkie, uczciwe pętle informacji zwrotnej biją długie przeglądy wydajności.** Robię szybkie cotygodniowe check-iny: co jest zablokowane, co jest mylące, co jest frustrujące. Nie "jak się czujesz", ale konkretne pytania. Problemy wychodzą w ciągu dni, nie kwartałów.
+Krótkie pętle informacji zwrotnej zamiast długich przeglądów wydajności. Robię szybkie cotygodniowe check-iny: co jest zablokowane, co jest mylące, co jest frustrujące. Nie "jak się czujesz", ale konkretne pytania. Problemy wychodzą w ciągu dni, nie kwartałów.
 
-**Zadaniem starszych inżynierów jest zmniejszanie niepewności dla wszystkich innych.** Kiedy przyjąłem narzędzia AI, doświadczeni inżynierowie szli pierwsi, dokumentowali co działa, a potem uczyli innych. Nikt nie był zostawiony, żeby sam na to wpaść.
+Seniorzy zmniejszają niepewność dla reszty. Kiedy przyjąłem narzędzia AI, doświadczeni inżynierowie szli pierwsi, dokumentowali co działa, a potem uczyli innych. Nikt nie był zostawiony, żeby sam na to wpaść.
 
-**Zatrudniaj pod kątem szybkości uczenia się, nie obecnych umiejętności.** Zatrudniłem inżynierów, którzy nie znali Pythona i stali się produktywni z narzędziami AI w ciągu tygodni. Ci, którzy opierają się nauce, zwielokrotniają ten opór w czasie 📉
+Zatrudniaj pod kątem szybkości uczenia się, nie obecnych umiejętności. Zatrudniłem inżynierów, którzy nie znali Pythona i stali się produktywni z narzędziami AI w ciągu tygodni. Ci, którzy opierają się nauce, zwielokrotniają ten opór w czasie 📉
 
 Jeden konkretny wynik: kiedy wdrożyłem LightRAG do naszego drugiego systemu RAG, cały zespół był w nim produktywny w ciągu dwóch sprintów. Bo zbudowałem w zespole nawyk uczenia się razem.
 
-**Zespół 10x to nie 10 świetnych programistów. To zespół, który sprawia, że każdy programista jest o 10% lepszy każdego miesiąca.**
+Zespół 10x to nie 10 świetnych programistów. To zespół, który sprawia, że każdy programista jest o 10% lepszy każdego miesiąca.
 
 Co tworzy świetny zespół inżynierski? Komentuj poniżej. Czytam każdą odpowiedź.
 

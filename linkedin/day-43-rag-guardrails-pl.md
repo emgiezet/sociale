@@ -33,13 +33,13 @@ Pierwsza reakcja większości zespołów: "dodajmy filtr, który usuwa nazwy kon
 
 Poprawne podejście: guardrails na każdej warstwie pipeline.
 
-**Warstwa 1: Context scoping** — przed retrieval filtrujemy dokumenty po atrybutach metadanych (insurer_id, product_line, document_type). LLM nigdy nie dostaje mieszanego kontekstu z różnych ubezpieczycieli, jeśli nie powinien.
+Warstwa 1: Context scoping. Przed retrieval filtrujemy dokumenty po atrybutach metadanych (insurer_id, product_line, document_type). LLM nigdy nie dostaje mieszanego kontekstu z różnych ubezpieczycieli, jeśli nie powinien.
 
-**Warstwa 2: Brand safety** — post-processing output: detekcja nazw konkurencji, off-topic detection, walidacja że odpowiedź dotyczy właściwego zakresu.
+Warstwa 2: Brand safety. Post-processing output: detekcja nazw konkurencji, off-topic detection, walidacja że odpowiedź dotyczy właściwego zakresu.
 
-**Warstwa 3: Topic boundaries** — system ma zdefiniowany zakres tematyczny. Pytania poza zakresem dostają "To pytanie wykracza poza moją wiedzę o produkcie X" — zamiast halucynacji z bliskiego tematu.
+Warstwa 3: Topic boundaries. System ma zdefiniowany zakres tematyczny. Pytania poza zakresem dostają "To pytanie wykracza poza moją wiedzę o produkcie X" zamiast halucynacji z bliskiego tematu.
 
-**Warstwa 4: AWS Bedrock Guardrails** — zarządzane guardrails dla compliance (RODO, PII detection), uzupełniają custom guardrails, nie zastępują.
+Warstwa 4: AWS Bedrock Guardrails. Zarządzane guardrails dla compliance (RODO, PII detection). Uzupełniają custom guardrails, nie zastępują.
 
 ---
 
@@ -47,7 +47,7 @@ Poprawne podejście: guardrails na każdej warstwie pipeline.
 
 False positives są tak samo groźne jak false negatives. Guardrail, który blokuje zbyt dużo, sprawia, że broker dzwoni do supportu zamiast korzystać z systemu. Zmierzyłem to: powyżej 8% rejection rate użytkownicy rezygnują z narzędzia.
 
-Kalibracja guardrails to nie jednorazowe ćwiczenie. To ciągły proces z czerwonym teamem — ktoś próbuje aktywnie obejść system — i zestawem testów w CI.
+Kalibracja guardrails to nie jednorazowe ćwiczenie. To ciągły proces z czerwonym teamem (ktoś próbuje aktywnie obejść system) i zestawem testów w CI.
 
 Adversarial test set: 150 pytań zaprojektowanych żeby wyciągnąć błędną odpowiedź. Uruchamiam przy każdym deployu.
 

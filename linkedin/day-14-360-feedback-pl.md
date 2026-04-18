@@ -27,7 +27,7 @@ Spędziłem dwa tygodnie zastanawiając się, gdzie leżała luka. Co odkryłem:
 
 Zmiana, którą zdecydowałem wprowadzić: wyraźnie oddzielam sformułowanie problemu od fazy rozwiązań. Najpierw przedstawiam problem. Zamykam usta. Swój kierunek oferuję dopiero po tym, jak inni się wypowiedzą.
 
-To brzmi oczywi ście. Nie było oczywiste, kiedy robiłem to w zły sposób.
+To brzmi oczywiście. Nie było oczywiste, kiedy robiłem to w zły sposób.
 
 **Najlepsza rzecz, którą daje Ci 360, to nie walidacja. To ta jedna rzecz, której nie mogłeś zobaczyć, bo byłeś zbyt blisko.**
 

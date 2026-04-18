@@ -17,25 +17,20 @@ Nie będę owijał w bawełnę.
 
 Przeprowadziłem to dla Insly — 15 inżynierów, 3 dni, dwa tory: nowe projekty i legacy. Widziałem co działa. Wiem co nie działa. I teraz robię to dla innych zespołów.
 
-**Dla kogo są te warsztaty:**
+Dla kogo to jest:
 
-→ Masz zespół programistów, którzy słyszeli o AI, może próbowali Copilota, ale nie zintegrowali AI z codzienną pracą w żaden systematyczny sposób
+→ Masz zespół programistów, którzy słyszeli o AI, może próbowali Copilota, ale nie zintegrowali tego z codzienną pracą
+→ Twój tech lead (albo Ty) wie, że AI przyspieszy pracę, ale nikt nie ma czasu budować wspólnych praktyk od zera
+→ Pracujesz z mieszanym stackiem — nowe projekty i legacy kod — i potrzebujesz podejścia dla obu
+→ Zależy Ci na tym, żeby programiści rozumieli co robią z AI, nie tylko kopiowali output
 
-→ Twój tech lead (albo Ty) wie, że AI przyspieszy pracę, ale nikt nie ma czasu na stworzenie wspólnych praktyk od zera
-
-→ Pracujesz z mieszanym stackiem — nowe projekty i legacy kod — i potrzebujesz podejścia dla obu scenariuszy
-
-→ Zależy Ci na tym, żeby programiści rozumieli co robią z AI, nie tylko kopiowali-wklejali output
-
-**Dla kogo to NIE jest:**
+Dla kogo to NIE jest:
 
 → Zespoły bez zaplecza technicznego — to nie jest "intro do AI dla każdego"
+→ Szukasz jednogodzinnego keynote o przyszłości AI — jest wiele takich osób do wynajęcia
+→ Chcesz gotowego rozwiązania wdrożonego za Ciebie — to jest transfer wiedzy, nie outsourcing
 
-→ Jeśli szukasz jednogodzinnego keynote o przyszłości AI — jest wiele takich osób do wynajęcia
-
-→ Jeśli chcesz gotowego rozwiązania wdrożonego za Ciebie — to jest transfer wiedzy, nie outsourcing
-
-**Co dostaje Twój zespół:**
+Co dostaje Twój zespół:
 
 Trzy dni praktycznej pracy. Prawdziwy kod, prawdziwe narzędzia, prawdziwe problemy. Nie slajdy.
 
@@ -43,15 +38,15 @@ Dwa tory: jak AI-first wygląda w nowym projekcie (od wymagań do deployu) i jak
 
 Konkretne techniki, które programista może użyć następnego dnia rano. Nie "mindset shift" — konkretne kroki.
 
-**Proof:**
+Skąd wiem, że to działa:
 
-Zrobiłem to dla Insly — europejski SaaS ubezpieczeniowy, 150 000 dokumentów miesięcznie w produkcji. Mój własny zespół 15 inżynierów buduje AI od ponad roku: AWS Bedrock, LightRAG, Python, Go. Nie uczę teorii. Uczę z trenczów.
+Zrobiłem to dla Insly — europejski SaaS ubezpieczeniowy, 150 000 dokumentów miesięcznie w produkcji. Mój własny zespół 15 inżynierów buduje AI od ponad roku: AWS Bedrock, LightRAG, Python, Go. Nie uczę teorii. Uczę z okopów.
 
 Trzy tygodnie po warsztatach zobaczyłem konkretne zmiany w zachowaniu zespołu — opisałem je szczegółowo w poprzednim poście.
 
-**Jak to wygląda w praktyce:**
+Jak to wygląda:
 
-Krótka rozmowa przed: rozumiem Twój stack, Twój zespół, główne bolączki. Warsztaty są dostosowane — nie kopiuję-wklejam tego samego programu dla każdego klienta.
+Krótka rozmowa przed — rozumiem Twój stack, Twój zespół, główne bolączki. Warsztaty są dostosowane, nie kopiuję tego samego programu dla każdego klienta.
 
 3 dni on-site lub remote (zależy od Ciebie).
 

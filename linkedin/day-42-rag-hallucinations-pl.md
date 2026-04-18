@@ -29,21 +29,21 @@ W RAG halucynacja wygląda inaczej: model ma kontekst, ale go parafrazuje zbyt l
 
 **5 checkpointów, które wdrożyłem w naszym pipeline**
 
-**1. Retrieval precision gate** — jeśli top chunk ma score poniżej progu (u nas 0.72 na cosine similarity), pipeline nie odpowiada. Nie wysyłamy do LLM kontekstu, który sam retriever ocenił jako słaby.
+1. Retrieval precision gate. Jeśli top chunk ma score poniżej progu (u nas 0.72 na cosine similarity), pipeline nie odpowiada. Nie wysyłamy do LLM kontekstu, który sam retriever ocenił jako słaby.
 
-**2. LLM-as-judge faithfulness** — osobny, tańszy model (Claude Haiku) weryfikuje: "Czy ta odpowiedź wynika wyłącznie z dostarczonego kontekstu?" Tak/nie + uzasadnienie. Zajmuje ~150ms i kosztuje ułamek centa.
+2. LLM-as-judge faithfulness. Osobny, tańszy model (Claude Haiku) weryfikuje: "Czy ta odpowiedź wynika wyłącznie z dostarczonego kontekstu?" Tak/nie + uzasadnienie. Zajmuje ~150ms i kosztuje ułamek centa.
 
-**3. Source-answer alignment** — sprawdzamy, czy kluczowe liczby i terminy w odpowiedzi faktycznie pojawiają się w zacytowanym fragmencie. Regexem. Prosto, ale skutecznie dla danych ubezpieczeniowych.
+3. Source-answer alignment. Sprawdzamy, czy kluczowe liczby i terminy w odpowiedzi faktycznie pojawiają się w zacytowanym fragmencie. Regexem. Prosto, ale skutecznie dla danych ubezpieczeniowych.
 
-**4. Confidence scoring** — model raportuje własną pewność. Nie jako zastępstwo dla poprzednich checkpointów, ale jako sygnał do logowania. Odpowiedzi z niskim confidence trafiają do kolejki review.
+4. Confidence scoring. Model raportuje własną pewność. Nie jako zastępstwo dla poprzednich checkpointów, ale jako sygnał do logowania. Odpowiedzi z niskim confidence trafiają do kolejki review.
 
-**5. Canary test set** — zestaw ~80 pytań ze znanych odpowiedzi, uruchamiany przy każdym deployu i co noc w produkcji. Jeśli precision spada poniżej 0.90, dostaję alert.
+5. Canary test set. Zestaw ~80 pytań ze znanych odpowiedzi, uruchamiany przy każdym deployu i co noc w produkcji. Jeśli precision spada poniżej 0.90, dostaję alert.
 
 ---
 
 **Przykład z produkcji**
 
-Mieliśmy zapytanie o zakres ochrony przy szkodzie komunikacyjnej. Model zwrócił odpowiedź z poprawnym numerem polisy, poprawnym źródłem i... błędną kwotą franszyzy redukcyjnej. Przeszedł przez checkpointy 1, 2, 3 i 4. Dopiero canary set wychwycił podobne pytanie jako regresję po aktualizacji modelu.
+Mieliśmy zapytanie o zakres ochrony przy szkodzie komunikacyjnej. Model zwrócił odpowiedź z poprawnym numerem polisy, poprawnym źródłem i błędną kwotą franszyzy redukcyjnej. Przeszedł przez checkpointy 1, 2, 3 i 4. Dopiero canary set wychwycił to jako regresję po aktualizacji modelu.
 
 Checkpoint 5 uratował produkcję.
 

@@ -15,17 +15,17 @@ Za 2 lata każda firma ubezpieczeniowa będzie potrzebować zespołu AI. Większ
 
 Prowadzę inżynierię AI w Insly. Obserwuję InsurTech od środka. Rozmawiam z innymi liderami inżynierskimi w tej przestrzeni. Przepaść między tym, co jest możliwe, a tym co większość firm ubezpieczeniowych faktycznie buduje, poszerza się — nie zwęża.
 
-Oto jak widzę krajobraz i czego moim zdaniem wymagają następne dwa lata.
+Oto jak widzę tę branżę i czego moim zdaniem wymagają następne dwa lata.
 
-**Co nadchodzi:**
+Co nadchodzi:
 
-Do 2027–2028, wspomagane AI ubezpieczanie, kopiloty dla brokerów, automatyczna triage roszczeń i inteligentne wyszukiwanie polis nie będą wyróżnikami. Będą podstawowymi oczekiwaniami. Firmy budujące teraz będą miały systemy hartowane w produkcji, własne frameworki ewaluacyjne i zespoły wiedzące jak iterować. Firmy zaczynające w 2028 będą kupować rozwiązania od dostawców i mieć nadzieję, że historia compliance będzie się trzymać 🤞
+Do 2027-2028, wspomagane AI ubezpieczanie, kopiloty dla brokerów, automatyczna triage roszczeń i inteligentne wyszukiwanie polis nie będą wyróżnikami. Będą podstawowymi oczekiwaniami. Firmy budujące teraz będą miały systemy hartowane w produkcji, własne frameworki ewaluacyjne i zespoły wiedzące jak iterować. Firmy zaczynające w 2028 będą kupować rozwiązania od dostawców i mieć nadzieję, że historia compliance będzie się trzymać 🤞
 
-**Pułapka, w którą wchodzi większość firm:**
+Pułapka, w którą wchodzi większość firm:
 
 Podpisywanie enterprise kontraktów z dostawcami AI zamiast budowania wewnętrznych możliwości. Rozwiązania dostawców są w porządku na start. Stają się zobowiązaniem gdy dostawca zmienia ceny, deprecjonuje funkcję lub nie radzi sobie z regulacyjnymi przypadkami brzegowymi specyficznymi dla Twojego kraju. Ubezpieczenia są zbyt domenowo specyficzne, żeby outsourcować rdzeń.
 
-**Playbook, 5 kroków:**
+Playbook, 5 kroków:
 
 1. Zatrudnij jednego lub dwóch inżynierów, którzy rozumieją zarówno fundamenty AI, jak i Twoją domenę. Nie generalistów AI. Ludzi, którzy nauczą się Twoich danych.
 
@@ -39,7 +39,7 @@ Podpisywanie enterprise kontraktów z dostawcami AI zamiast budowania wewnętrzn
 
 W Insly jestem do przodu dlatego, że zacząłem zanim było oczywiste, że muszę. Ta przewaga nakopiwuje się z każdym kwartałem 📈
 
-**Firmy ubezpieczeniowe, które będą liderami w 2028, to te budujące wewnętrzne możliwości AI w 2026. Nie wszyscy to zrobią. Ta przepaść to szansa.**
+Firmy ubezpieczeniowe, które będą liderami w 2028, to te budujące wewnętrzne możliwości AI w 2026. Nie wszyscy to zrobią. Ta przepaść to szansa.
 
 Skontaktuj się jeśli budujesz AI w ubezpieczeniach, lub próbujesz dowiedzieć się od czego zacząć.
 

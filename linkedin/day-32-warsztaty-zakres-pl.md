@@ -17,7 +17,7 @@ Nie "intro do AI". Nie "możliwości ChatGPT". Konkretny, zaplanowany program �
 
 Dlaczego dwie ścieżki? Bo problemy są różne. Programista budujący nowy mikroserwis ma inne pytania niż ten, kto utrzymuje Symfony z 2012 roku. Mieszanie ich w jedno byłoby błędem.
 
-**Ścieżka 1 — Nowe projekty**
+Ścieżka 1 — Nowe projekty
 
 → Konfiguracja środowiska: Cursor, Copilot, lokalne modele (Ollama), co wybrać i kiedy
 → Workflow z AI: jak pisać, żeby AI rozumiało kontekst — nie tylko prompty, ale struktura kodu
@@ -26,7 +26,7 @@ Dlaczego dwie ścieżki? Bo problemy są różne. Programista budujący nowy mik
 → Dokumentacja: generowanie OpenAPI, komentarze, README — rzeczy które zawsze lądują na koniec kolejki
 → Prototypowanie: od pomysłu do działającego PoC w ciągu jednego spotkania
 
-**Ścieżka 2 — Legacy i istniejące systemy**
+Ścieżka 2 — Legacy i istniejące systemy
 
 → Rozumienie nieznajomego kodu: "powiedz mi co robi ta klasa" — i jak ocenić odpowiedź
 → Refaktoring z AI: jak przepisywać bezpiecznie, z testami jako siatką bezpieczeństwa
@@ -34,7 +34,7 @@ Dlaczego dwie ścieżki? Bo problemy są różne. Programista budujący nowy mik
 → Polowanie na bugi: AI jako drugi mózg przy trudnych debugowaniach
 → Migracje i modernizacje: jak planować większe zmiany z pomocą AI
 
-**Struktura**
+Struktura
 
 Każdy dzień: 30% teoria, 70% praktyka. Na własnym kodzie. Na prawdziwych taskach ze sprintu.
 
